@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Transcription</title>
+    <meta name="description" content="A cool thing made with HyperDev">
+    <link id="favicon" rel="icon" href="https://hyperweb.space/favicon.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <header>
+      <h1>
+        Transcribing help
+      </h1>
+    </header>
+
+    <main>
+      <p>Paste your sbv file below to clean it up. Insert <b>1</b> and <b>2</b> into your transcript to replace it with the person's name. Words after periods and question marks are automatically capitalized for you. Just make sure you insert periods and question marks at the end of sentences when proof reading the transcript. New lines are automatically added for you too. For example</p>
+      <blockquote>
+<pre>0:00:05.089,0:00:11.610
+1okay so tell me about a time when you
+
+0:00:09.330,0:00:13.740
+were excited to learn about a 
+
+0:00:11.610,0:00:22.560
+course material in a specific sociology
+
+0:00:13.740,0:00:25.010
+course. 2there's a genuine time 1may be the
+
+0:00:22.560,0:00:25.010
+best one you've had
+
+0:00:30.380,0:00:53.699
+2I'm trying to think of a course that's
+
+0:00:32.700,0:00:54.800
+specifically soc. sorry.</pre>
+      </blockquote>
+      <p>
+        Will get converted to:
+      </p>
+      <blockquote>
+<pre>
+Person 1: Okay so tell me about a time when you were excited to learn about a course material in a specific sociology course. 
+
+Person 2: There's a genuine time 
+
+Person 1: May be the best one you've had 
+
+Person 2: I'm trying to think of a course that's specifically soc. Sorry. </pre>
+      </blockquote>
+      <p>
+        Tips: 
+        <ul>
+          <li>don't use the numbers <b>1</b> and <b>2</b> in your transcript as they always get converted to person names. Use <b>one</b> and <b>two</b> instead as needed. Convert years to words as well, e.g. change 1984 to nineteen eighty-four in order to remove the "1" from "1984".</li>
+      </ul>
+      </p>
+      <form method="post" action="dreams">
+        Person 1 name: <input name="person1" value="Person 1" type="text"/>
+        <br/>Person 2 name: <input name="person2" type="text" value="Person 2"/>
+        <textarea name="sbv" id="sbv" placeholder="SBV file" cols="100" rows="10"></textarea>
+        <p>
+          <button type="submit">Submit</button>
+        </p>
+      </form>
+      <section class="formatted">
+        
+      </section>
+    </main>
+
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="/client.js"></script>
+
+  </body>
+</html>
